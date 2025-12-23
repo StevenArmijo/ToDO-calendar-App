@@ -60,8 +60,8 @@ body{
 }
 
 .progressRing{
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   position: relative;
   display: grid;
@@ -80,15 +80,15 @@ body{
 .progressRing::after{
   content: "";
   position:absolute;
-  inset: 20px;
+  inset: 8px;
   border-radius: 50%;
   z-index: 0;
   background-color:  rgb(239, 239, 239);
   
 }
 #numbers {
-  width: 100px;
-  height: 100px;
+  width: 76px;
+  height: 76px;
   background-color: rgb(239, 239, 239);
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@ h4, h2 {
   padding: 20px 14px;
   border: 1px solid #e3e5e7;
   border-radius: 16px;
-  width: 600px;
+  min-width: 300px;
   gap: 6px;
   list-style-type: none;
   font-family: "Jua", sans-serif;
