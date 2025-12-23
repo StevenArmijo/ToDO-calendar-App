@@ -131,7 +131,7 @@ form, section{
 input[type="text"]:not(.editInput, #eventTitle){
     flex: 1;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     min-height: 50px;
     margin: 20px auto 0 auto;
     padding: 12px 14px;
@@ -206,6 +206,7 @@ h4, h2 {
 .todoContainer,.todo {
   display: flex;
   flex-direction: column;  
+  max-width: 300px;
   gap: 14px;
 
 }
@@ -683,6 +684,121 @@ display: none;
 .descriptionBox:focus-within .descUnderline{
   transform: scaleX(1);
 }
+@media (min-width:640px) {
+  .container,
+  form,
+  section {
+    padding: 20px;
+  }
+  .toDos{
+    width: 100%;
+    max-width: 900px;
+  }
+  .statsContainer{
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 960px){
+  body{
+    padding: 24px 48px;
+  }
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1100px;
+  }
+  form {
+    max-width: 420px;
+    align-items: flex-start;
+  }
+  .toDos{
+    width: 100%;
+    max-width: 1100px;
+  }
+  .calendar{
+    max-width: 1100px;
+    padding: 24px;
+  }
+  section{
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  input[type ="text"]:not(.editInput, #eventTitle) {
+  max-width: 100%;
+}
+.toDos{
+  width: 100%;
+  max-width: 100%;
+}
+
+}
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .calendar {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 1rem auto;
+  }
+
+  .calendar-header h2#monthLabel {
+    font-size: 18px;
+  }
+
+  .calendarButton {
+    height: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+
+  .weekdayRow {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .calendar-Grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .dayCell {
+    min-height: 72px;            /* shorten boxes */
+    padding: 6px;
+  }
+
+  .dayNumber {
+    font-size: 12px;
+  }
+
+  .eventDots {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .eventDot {
+    padding: 2px 6px;
+    font-size: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Slightly larger phones / small tablets */
+@media (max-width: 480px) {
+  .calendar {
+    padding: 10px;
+  }
+  .dayCell {
+    min-height: 64px;
+  }
+}
+
 /* #descripBox:focus{
   border-bottom-color: #1a73e8;
 } */
